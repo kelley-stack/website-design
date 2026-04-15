@@ -86,20 +86,19 @@
 
   /* ── 3. GALLERY LIGHTBOX ─────────────────────────────────────── */
   const GALLERY = [
-    { src: 'images/gallery/aerial-1.jpg',        caption: 'Aerial — West Fork Estates'              },
-    { src: 'images/gallery/front-elevation.jpg', caption: '4817 West Fork Blvd — Front Elevation'   },
-    { src: 'images/gallery/aerial-2.jpg',        caption: 'Aerial — Golf Course & River Views'      },
-    { src: 'images/gallery/aerial-3.jpg',        caption: 'Aerial — Property Overview'              },
-    { src: 'images/gallery/aerial-4.jpg',        caption: 'Aerial — River Greenbelt'                },
-    { src: 'images/gallery/backyard.jpg',        caption: 'Backyard — Golf Course Views'            },
-    { src: 'images/gallery/deck-staged.png',     caption: 'Covered Back Porch — Virtually Staged'   },
-    { src: 'images/gallery/living-staged.png',   caption: 'Living Room — Virtually Staged'          },
-    { src: 'images/gallery/dining-staged.png',   caption: 'Dining Room — Virtually Staged'          },
-    { src: 'images/gallery/kitchen.jpg',         caption: "Chef's Kitchen"                          },
-    { src: 'images/gallery/entryway.jpg',        caption: 'Grand Entryway'                          },
-    { src: 'images/gallery/primary-staged.png',  caption: 'Primary Suite — Virtually Staged'        },
-    { src: 'images/gallery/primary-bedroom.jpg', caption: 'Primary Bedroom'                         },
-    { src: 'images/gallery/dining.jpg',          caption: 'Dining Room'                             },
+    { src: 'images/gallery/g-01.jpg',  caption: '4817 West Fork Blvd — Front Elevation'  },
+    { src: 'images/gallery/g-02.png',  caption: '4817 West Fork Blvd — Photo 2'          },
+    { src: 'images/gallery/g-03.png',  caption: '4817 West Fork Blvd — Photo 3'          },
+    { src: 'images/gallery/g-04.png',  caption: '4817 West Fork Blvd — Photo 4'          },
+    { src: 'images/gallery/g-05.png',  caption: '4817 West Fork Blvd — Photo 5'          },
+    { src: 'images/gallery/g-06.jpg',  caption: '4817 West Fork Blvd — Photo 6'          },
+    { src: 'images/gallery/g-07.png',  caption: '4817 West Fork Blvd — Photo 7'          },
+    { src: 'images/gallery/g-08.jpg',  caption: '4817 West Fork Blvd — Photo 8'          },
+    { src: 'images/gallery/g-09.png',  caption: '4817 West Fork Blvd — Photo 9'          },
+    { src: 'images/gallery/g-10.png',  caption: '4817 West Fork Blvd — Photo 10'         },
+    { src: 'images/gallery/g-11.png',  caption: '4817 West Fork Blvd — Photo 11'         },
+    { src: 'images/gallery/g-12.png',  caption: '4817 West Fork Blvd — Photo 12'         },
+    { src: 'images/gallery/g-13.png',  caption: '4817 West Fork Blvd — Photo 13'         },
   ];
 
   let currentIdx = 0;
