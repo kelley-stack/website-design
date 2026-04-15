@@ -14,3 +14,9 @@ Virtually staged/
 
 # Netlify local dev cache
 .netlify/
+
+# Claude Code internals
+.claude/
+
+# Brand assets (keep locally, not in repo)
+*.pdf
