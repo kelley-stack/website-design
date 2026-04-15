@@ -775,6 +775,9 @@ footer {
 .footer-disc { font-size: 11px; color: rgba(255,255,255,0.2); max-width: 520px; line-height: 1.65; }
 .footer-disc a { color: rgba(255,255,255,0.4); border-bottom: 1px solid rgba(255,255,255,0.2); }
 .footer-disc a:hover { color: rgba(255,255,255,0.7); }
+.footer-legal { font-size: 12pt; color: rgba(255,255,255,0.6); }
+.footer-legal a { font-size: 12pt; color: rgba(255,255,255,0.75); border-bottom: 1px solid rgba(255,255,255,0.3); }
+.footer-legal a:hover { color: #fff; }
 
 
 /* ══════════════════════════════════════════════════════════════
