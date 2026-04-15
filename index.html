@@ -7,57 +7,157 @@
   <meta name="description" content="Rare dual-view estate on the championship fairways of The Links at West Fork and the San Jacinto River. Available individually or as a 1.2+ acre private compound.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <!-- ═══════════════════════════════════════════════════════════
+     SVG ICON SPRITE
+     ═══════════════════════════════════════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.24 19.79 19.79 0 0 1 1.62 4.61 2 2 0 0 1 3.6 2.42h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="4" width="20" height="16" rx="2"/>
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+  </symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2"/>
+    <path d="M16 2v4M8 2v4M3 10h18"/>
+  </symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14M12 5l7 7-7 7"/>
+  </symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 12H5M12 19l-7-7 7-7"/>
+  </symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 6 6 18M6 6l12 12"/>
+  </symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
+    <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+  </symbol>
+  <symbol id="i-golf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22V3"/><path d="m12 3 8 4-8 4"/>
+    <path d="M5 20c0 1.1 3.1 2 7 2s7-.9 7-2"/>
+  </symbol>
+  <symbol id="i-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2"/>
+    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2"/>
+    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2"/>
+  </symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22v-7"/><path d="m17 8-5-6-5 6h3l-3 4h4l-3 4h8l-3-4h4l-3-4h3z"/>
+  </symbol>
+  <symbol id="i-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    <polyline points="9 22 9 12 15 12 15 22"/>
+  </symbol>
+  <symbol id="i-road" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 3 3 21M19 3l2 18M12 3v18M9 9h1M9 15h1M14 9h1M14 15h1"/>
+  </symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2c-.5.1-.9.5-1 1l-.1.5 4 4 .5.1L7 13l2 1 2-2"/>
+    <path d="m9 18.7 2 1.2 2.9-2.9"/>
+  </symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/>
+    <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+  </symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <path d="M16 10a4 4 0 0 1-8 0"/>
+  </symbol>
+  <symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 18V5l12-2v13"/>
+    <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+  </symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/>
+  </symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V12a8 8 0 0 0 16 0v-2H9V6z"/>
+  </symbol>
+  <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 17H3a2 2 0 0 1-2-2V9l2.7-5.4A2 2 0 0 1 5.5 2h13a2 2 0 0 1 1.8 1.1L23 9v6a2 2 0 0 1-2 2h-2"/>
+    <circle cx="7.5" cy="17" r="2.5"/><circle cx="16.5" cy="17" r="2.5"/>
+  </symbol>
+  <symbol id="i-acres" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="2"/>
+    <path d="M2 12h20M12 2v20"/>
+  </symbol>
+  <symbol id="i-sqft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2"/>
+    <path d="M3 9h18M9 3v18"/>
+  </symbol>
+  <symbol id="i-google-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+    <path d="m9 16 2 2 4-4"/>
+  </symbol>
+  <symbol id="i-apple-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 20.94c1.5 0 4-.6 4-8.94 0-4.94-2-7-4-7s-4 2.06-4 7c0 8.34 2.5 8.94 4 8.94Z"/>
+    <path d="M12 6V2M9 3.5C9 3.5 7 4 7 2"/>
+  </symbol>
+</svg>
+
+
+<!-- ═══════════════════════════════════════════════════════════
      NAV
      ═══════════════════════════════════════════════════════════ -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-brand">
-    <div class="nav-logo-badge" aria-hidden="true">WF</div>
-    <div class="nav-title-stack">
+    <div class="nav-logo">
+      <div class="nav-logo-mark" aria-hidden="true">WF</div>
+    </div>
+    <div class="nav-divider" aria-hidden="true"></div>
+    <div class="nav-text">
       <span class="nav-company">Kelley Bouchard | Realty of America</span>
-      <span class="nav-address">4817 &amp; 4815 West Fork Blvd</span>
+      <span class="nav-address">4817 &amp; 4815 West Fork Blvd, Conroe TX</span>
     </div>
   </div>
-  <nav class="nav-links">
+  <div class="nav-links">
     <a href="#gallery">Gallery</a>
     <a href="#properties">Properties</a>
     <a href="#features">Lifestyle</a>
     <a href="#directions">Directions</a>
     <a href="#contact" class="nav-cta">Schedule a Showing</a>
-  </nav>
+  </div>
 </nav>
 
 
 <!-- ═══════════════════════════════════════════════════════════
      HERO
      ═══════════════════════════════════════════════════════════ -->
-<section class="hero" aria-label="Property hero">
+<section class="hero" aria-label="Property overview">
   <div class="hero-bg" aria-hidden="true">
-    <img src="images/hero/hero.jpg" alt="Aerial view of West Fork Estates" fetchpriority="high">
+    <img src="images/hero/hero.jpg" alt="Aerial view of West Fork Estates — golf course and river" fetchpriority="high">
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <div class="hero-tag">
-      <span class="hero-tag-dot" aria-hidden="true"></span>
-      4817 &amp; 4815 — West Fork Estates · Conroe, TX 77304
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+      4817 &amp; 4815 West Fork Blvd &nbsp;·&nbsp; West Fork Estates &nbsp;·&nbsp; Conroe, TX 77304
     </div>
 
     <h1 class="hero-headline">
-      The Perfect Lots For<br>Your <em>Custom Legacy</em>
+      The Perfect Setting<br>For Your <em>Legacy Estate</em>
     </h1>
 
     <p class="hero-sub">
-      Rare dual-view estate on the championship fairways of The Links at West Fork
+      Rare dual-view property on the championship fairways of The Links at West Fork
       and the San Jacinto River. Available individually or as a 1.2+ acre private compound.
     </p>
 
-    <div class="hero-stats" role="list" aria-label="Property quick facts">
+    <div class="hero-stats" role="list" aria-label="Property highlights">
       <div class="hero-stat" role="listitem" data-hero-stat="0">
         <span class="hero-stat-num">4BR / 4.5BA</span>
         <span class="hero-stat-label">Beds &amp; Baths</span>
@@ -76,10 +176,14 @@
       </div>
     </div>
 
-    <div class="hero-buttons">
-      <a href="#properties" class="btn btn-primary">View Properties</a>
+    <div class="hero-actions">
+      <a href="#properties" class="btn btn-primary">
+        View Properties
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
       <button class="btn btn-secondary" data-open-oh-modal aria-label="Open house details">
-        🏡 Open House Details
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"/></svg>
+        Open House Details
       </button>
     </div>
   </div>
@@ -90,15 +194,15 @@
      OPEN HOUSE BANNER
      ═══════════════════════════════════════════════════════════ -->
 <div class="open-house-banner" id="open-house" data-oh aria-label="Open house announcement">
-  <div class="oh-left">
-    <div class="oh-icon" aria-hidden="true">🏠</div>
-    <div class="oh-text">
-      <div class="oh-text-top">You're Invited</div>
-      <div class="oh-text-main">Open House — <span data-oh-date>Sunday, April 19th</span></div>
-      <div class="oh-text-sub"><span data-oh-time>2:00 PM – 4:00 PM</span> · <span data-oh-address>4817 West Fork Blvd, Conroe, TX 77304</span></div>
-    </div>
+  <div>
+    <div class="oh-label">Open House</div>
+    <div class="oh-main">Sunday, <span data-oh-date>April 19th</span> &nbsp;&mdash;&nbsp; <span data-oh-time>2:00 – 4:00 PM</span></div>
+    <div class="oh-sub"><span data-oh-address>4817 West Fork Blvd, Conroe, TX 77304</span></div>
   </div>
-  <button class="btn btn-white" data-open-oh-modal>RSVP &amp; Add to Calendar</button>
+  <button class="btn btn-white" data-open-oh-modal>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"/></svg>
+    RSVP &amp; Add to Calendar
+  </button>
 </div>
 
 
@@ -111,33 +215,39 @@
     <h2 class="section-title">Views You Have to<br><em>See to Believe</em></h2>
   </div>
 
-  <div class="photo-grid" role="list" aria-label="Photo grid">
-    <!-- Large main cell — aerial -->
-    <div class="photo-cell main" role="listitem" data-gallery-idx="0" tabindex="0" aria-label="Open aerial photo in gallery">
-      <img src="images/gallery/aerial-1.jpg" alt="Aerial view of West Fork Estates property" loading="lazy">
+  <div class="photo-grid" role="list" aria-label="Photo gallery grid">
+    <div class="photo-cell main" role="listitem" data-gallery-idx="0" tabindex="0" aria-label="Open full gallery">
+      <img src="images/gallery/aerial-1.jpg" alt="Aerial view — West Fork Estates property and golf course" loading="lazy">
       <div class="photo-overlay">
-        <span class="photo-count-badge">View All 14 Photos</span>
+        <span class="photo-expand-icon" aria-hidden="true">
+          <svg class="icon icon-md"><use href="#i-expand"/></svg>
+        </span>
+      </div>
+      <span class="photo-count-pill">View All 14 Photos</span>
+    </div>
+    <div class="photo-cell" role="listitem" data-gallery-idx="1" tabindex="0" aria-label="Front elevation">
+      <img src="images/gallery/front-elevation.jpg" alt="4817 West Fork Blvd — front elevation" loading="lazy">
+      <div class="photo-overlay">
+        <span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span>
       </div>
     </div>
-    <!-- Top-right: front elevation -->
-    <div class="photo-cell" role="listitem" data-gallery-idx="1" tabindex="0" aria-label="Open front elevation photo">
-      <img src="images/gallery/front-elevation.jpg" alt="4817 West Fork Blvd front elevation" loading="lazy">
-      <div class="photo-overlay"></div>
+    <div class="photo-cell" role="listitem" data-gallery-idx="6" tabindex="0" aria-label="Covered back porch">
+      <img src="images/gallery/deck-staged.png" alt="Covered back porch with golf course views — virtually staged" loading="lazy">
+      <div class="photo-overlay">
+        <span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span>
+      </div>
     </div>
-    <!-- Top-right 2: deck staged -->
-    <div class="photo-cell" role="listitem" data-gallery-idx="6" tabindex="0" aria-label="Open deck photo">
-      <img src="images/gallery/deck-staged.png" alt="Covered back porch with golf course views" loading="lazy">
-      <div class="photo-overlay"></div>
+    <div class="photo-cell" role="listitem" data-gallery-idx="7" tabindex="0" aria-label="Living room">
+      <img src="images/gallery/living-staged.png" alt="Living room — virtually staged" loading="lazy">
+      <div class="photo-overlay">
+        <span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span>
+      </div>
     </div>
-    <!-- Bottom-right: living room staged -->
-    <div class="photo-cell" role="listitem" data-gallery-idx="7" tabindex="0" aria-label="Open living room photo">
-      <img src="images/gallery/living-staged.png" alt="Living room virtually staged" loading="lazy">
-      <div class="photo-overlay"></div>
-    </div>
-    <!-- Bottom-right 2: kitchen -->
-    <div class="photo-cell" role="listitem" data-gallery-idx="9" tabindex="0" aria-label="Open kitchen photo">
+    <div class="photo-cell" role="listitem" data-gallery-idx="9" tabindex="0" aria-label="Chef's kitchen">
       <img src="images/gallery/kitchen.jpg" alt="Chef's kitchen" loading="lazy">
-      <div class="photo-overlay"></div>
+      <div class="photo-overlay">
+        <span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span>
+      </div>
     </div>
   </div>
 </section>
@@ -158,36 +268,42 @@
     <article class="property-card featured" aria-label="4817 West Fork Blvd — Estate Home">
       <span class="card-badge badge-estate">The Estate</span>
       <div class="card-photo">
-        <img src="images/property/home-exterior.jpg" alt="4817 West Fork Blvd front elevation" loading="lazy">
+        <img src="images/property/home-exterior.jpg" alt="4817 West Fork Blvd — front elevation" loading="lazy">
       </div>
       <div class="card-body">
-        <div class="card-address">4817 West Fork Blvd · Conroe, TX 77304</div>
+        <div class="card-address">4817 West Fork Blvd &nbsp;·&nbsp; Conroe, TX 77304</div>
         <h3 class="card-title">Estate Home on the Golf Course</h3>
         <div class="card-price" data-home-price>$590,000</div>
-        <div class="card-price-note">4 Beds · 4 Full / 1 Half Baths · Built 2007 · Traditional Style</div>
+        <div class="card-price-note">4 Beds &nbsp;·&nbsp; 4 Full / 1 Half Baths &nbsp;·&nbsp; Built 2007 &nbsp;·&nbsp; Traditional</div>
         <div class="card-specs">
           <div class="card-spec">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-sqft"/></svg>
             <div class="card-spec-num">4,054</div>
             <div class="card-spec-label">Sq Ft</div>
           </div>
           <div class="card-spec">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-acres"/></svg>
             <div class="card-spec-num">0.67</div>
             <div class="card-spec-label">Acres</div>
           </div>
           <div class="card-spec">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-car"/></svg>
             <div class="card-spec-num">2</div>
             <div class="card-spec-label">Car Garage</div>
           </div>
         </div>
         <ul class="card-features" aria-label="Home features">
-          <li><span class="feat-dot" aria-hidden="true"></span>Dual-view: championship fairways + San Jacinto River basin</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Resort-style primary suite with spa bath</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Chef's kitchen open to living and golf course views</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Expansive covered back porch — golf and river views</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Private study, formal dining, game room</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Two-car garage plus generous driveway</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Dual-view: championship fairways + San Jacinto River basin</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Resort-style primary suite with spa bath</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Chef's kitchen open to living and golf course views</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Expansive covered back porch — golf and river views</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Private study, formal dining, game room</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Two-car garage plus generous driveway</li>
         </ul>
-        <a href="#contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Schedule a Showing</a>
+        <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">
+          Schedule a Showing
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
       </div>
     </article>
 
@@ -195,36 +311,42 @@
     <article class="property-card" aria-label="4815 West Fork Blvd — Wooded Lot">
       <span class="card-badge badge-lot">Wooded Lot</span>
       <div class="card-photo">
-        <img src="images/property/lot-aerial.jpg" alt="4815 West Fork Blvd wooded lot aerial view" loading="lazy">
+        <img src="images/property/lot-aerial.jpg" alt="4815 West Fork Blvd — aerial view of wooded lot" loading="lazy">
       </div>
       <div class="card-body">
-        <div class="card-address">4815 West Fork Blvd · Conroe, TX 77304</div>
+        <div class="card-address">4815 West Fork Blvd &nbsp;·&nbsp; Conroe, TX 77304</div>
         <h3 class="card-title">Premier Wooded Homesite in West Fork Estates</h3>
         <div class="card-price" data-lot-price>$90,000</div>
-        <div class="card-price-note">Adjacent wooded lot · Ready to build your custom dream home or combine with 4817</div>
+        <div class="card-price-note">Adjacent wooded lot &nbsp;·&nbsp; Ready to build &nbsp;·&nbsp; Combine with 4817</div>
         <div class="card-specs">
           <div class="card-spec">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-acres"/></svg>
             <div class="card-spec-num">0.64</div>
             <div class="card-spec-label">Acres</div>
           </div>
           <div class="card-spec">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-sqft"/></svg>
             <div class="card-spec-num">27,784</div>
             <div class="card-spec-label">Sq Ft Lot</div>
           </div>
           <div class="card-spec">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>
             <div class="card-spec-num">77304</div>
-            <div class="card-spec-label">Zip</div>
+            <div class="card-spec-label">Zip Code</div>
           </div>
         </div>
         <ul class="card-features" aria-label="Lot features">
-          <li><span class="feat-dot" aria-hidden="true"></span>Signature rolling terrain with mature majestic tree canopy</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Backs to San Jacinto River greenbelt</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Adjacent to 4817 estate — ideal combined compound</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Golf course community — The Links at West Fork</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Unrivaled potential for a custom legacy build or private compound</li>
-          <li><span class="feat-dot" aria-hidden="true"></span>Deed restrictions in place (West Fork 03)</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Signature rolling terrain with mature hardwood canopy</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Backs to San Jacinto River greenbelt</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Adjacent to 4817 estate — ideal combined compound</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Golf course community — The Links at West Fork</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Unrivaled potential for custom legacy build or compound</li>
+          <li><span class="feat-mark" aria-hidden="true"></span>Deed restrictions in place (West Fork 03)</li>
         </ul>
-        <a href="#contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Inquire About Lot</a>
+        <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">
+          Inquire About Lot
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
       </div>
     </article>
 
@@ -236,30 +358,38 @@
      COMPOUND CALLOUT
      ═══════════════════════════════════════════════════════════ -->
 <section class="compound-section" aria-label="Combined compound opportunity">
-  <div class="compound-content">
-    <div class="compound-icon" aria-hidden="true">🏰</div>
-    <h2 class="compound-title">One Vision.<br><span>1.2+ Acres of Private Compound.</span></h2>
-    <p class="compound-desc">
-      Purchase both properties to secure one of the largest private estate footprints in West Fork.
-      Live in the existing four-bedroom luxury home while designing another custom build or private
-      pool oasis on the adjacent wooded lot — both of which offer pristine San Jacinto River
-      frontage and golf course views.
-    </p>
-    <div class="compound-price-row">
-      <div class="price-pill">
-        <div class="price-pill-label" data-home-price-pill-label>4817 Estate Home</div>
-        <div class="price-pill-val"   data-home-price-pill-val>$590,000</div>
+  <div class="compound-layout">
+    <div class="compound-text">
+      <div class="compound-kicker">Combined Opportunity</div>
+      <h2 class="compound-title">One Vision.<br><span>1.2+ Acres of</span><br>Private Compound.</h2>
+      <p class="compound-desc">
+        Purchase both properties to secure one of the largest private estate footprints
+        in West Fork. Live in the existing four-bedroom luxury home while designing
+        another custom build or private pool oasis on the adjacent wooded lot —
+        both offering San Jacinto River frontage and golf course views.
+      </p>
+      <a href="#contact" class="btn btn-outline-green">
+        Discuss Compound Pricing
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+    <div class="compound-prices">
+      <div class="price-card">
+        <div class="price-card-label" data-home-price-pill-label>4817 Estate Home</div>
+        <div class="price-card-val" data-home-price-pill-val>$590,000</div>
+        <div class="price-card-sub">4BR / 4.5BA · 4,054 SF · 0.67 Acres</div>
       </div>
-      <div class="price-pill">
-        <div class="price-pill-label" data-lot-price-pill-label>4815 Wooded Lot</div>
-        <div class="price-pill-val"   data-lot-price-pill-val>$90,000</div>
+      <div class="price-card">
+        <div class="price-card-label" data-lot-price-pill-label>4815 Wooded Lot</div>
+        <div class="price-card-val" data-lot-price-pill-val>$90,000</div>
+        <div class="price-card-sub">0.64 Acres · 27,784 SF Lot</div>
       </div>
-      <div class="price-pill highlight">
-        <div class="price-pill-label">Combined Compound</div>
-        <div class="price-pill-val" data-combined-price>$680,000</div>
+      <div class="price-card highlight">
+        <div class="price-card-label">Combined Compound</div>
+        <div class="price-card-val" data-combined-price>$680,000</div>
+        <div class="price-card-sub">1.2+ Total Acres · Golf + River Views</div>
       </div>
     </div>
-    <a href="#contact" class="btn btn-ghost">Discuss Compound Pricing →</a>
   </div>
 </section>
 
@@ -278,44 +408,77 @@
       <h3>Resort-Style Privacy.<br><em>Minutes from Everything.</em></h3>
       <p>
         Perched on the premium estate section of West Fork, this property delivers a rare
-        "dual-layered" panorama — championship fairways of The Links at West Fork transitioning
+        dual-layered panorama — championship fairways of The Links at West Fork transitioning
         into the lush, tranquil basin of the San Jacinto River.
       </p>
       <p>
         Yet you're never more than 5 miles from Lake Conroe, 15 miles from The Woodlands,
-        and easy access to I-45 for commutes and airport travel.
+        and minutes from I-45 for commutes and airport travel.
       </p>
       <ul class="lifestyle-highlights" aria-label="Location highlights">
-        <li><div class="lh-icon" aria-hidden="true">⛳</div>Backs to The Links at West Fork championship golf course</li>
-        <li><div class="lh-icon" aria-hidden="true">🌊</div>San Jacinto River greenbelt views — nature at your backyard</li>
-        <li><div class="lh-icon" aria-hidden="true">🌳</div>Signature rolling terrain and mature hardwood canopy</li>
-        <li><div class="lh-icon" aria-hidden="true">🏡</div>Hidden-gem neighborhood — no through traffic, quiet &amp; private</li>
-        <li><div class="lh-icon" aria-hidden="true">🛣️</div>5 miles to Lake Conroe · 15 miles to The Woodlands · Easy I-45 access</li>
+        <li>
+          <div class="lh-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-golf"/></svg>
+          </div>
+          Backs to The Links at West Fork championship golf course
+        </li>
+        <li>
+          <div class="lh-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-waves"/></svg>
+          </div>
+          San Jacinto River greenbelt views — nature at your doorstep
+        </li>
+        <li>
+          <div class="lh-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-tree"/></svg>
+          </div>
+          Signature rolling terrain and mature hardwood canopy
+        </li>
+        <li>
+          <div class="lh-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-house"/></svg>
+          </div>
+          Hidden-gem neighborhood — no through traffic, quiet &amp; private
+        </li>
+        <li>
+          <div class="lh-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-road"/></svg>
+          </div>
+          5 mi to Lake Conroe &nbsp;·&nbsp; 15 mi to The Woodlands &nbsp;·&nbsp; Easy I-45 access
+        </li>
       </ul>
     </div>
 
     <div>
-      <div class="lifestyle-image-wrap" style="margin-bottom:16px;">
+      <div class="lifestyle-image-wrap">
         <img src="images/gallery/backyard.jpg" alt="Backyard view with golf course" loading="lazy">
       </div>
       <div class="lifestyle-cards">
         <div class="lifestyle-card">
-          <div class="lc-icon" aria-hidden="true">🍽️</div>
+          <div class="lc-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-utensils"/></svg>
+          </div>
           <div class="lc-title">Waterfront Dining</div>
           <div class="lc-desc">Monty's Lighthouse, Fajita Jack's, Akashi on Lake Conroe</div>
         </div>
         <div class="lifestyle-card">
-          <div class="lc-icon" aria-hidden="true">🛍️</div>
+          <div class="lc-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-bag"/></svg>
+          </div>
           <div class="lc-title">Premier Shopping</div>
           <div class="lc-desc">336 Marketplace, Outlets at Conroe, The Woodlands Mall</div>
         </div>
         <div class="lifestyle-card">
-          <div class="lc-icon" aria-hidden="true">🎵</div>
-          <div class="lc-title">Arts &amp; Wine</div>
+          <div class="lc-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-music"/></svg>
+          </div>
+          <div class="lc-title">Arts &amp; Culture</div>
           <div class="lc-desc">Bernhardt Winery, Red Brick Tavern, downtown Conroe venues</div>
         </div>
         <div class="lifestyle-card">
-          <div class="lc-icon" aria-hidden="true">✈️</div>
+          <div class="lc-icon-wrap" aria-hidden="true">
+            <svg class="icon icon-sm"><use href="#i-plane"/></svg>
+          </div>
           <div class="lc-title">Easy Commute</div>
           <div class="lc-desc">IAH Airport &amp; The Woodlands employment hub nearby</div>
         </div>
@@ -331,12 +494,13 @@
 <section class="quote-section" aria-label="Seller quote">
   <span class="quote-mark" aria-hidden="true">"</span>
   <p class="quote-text">
-    The views are truly incredible, spanning from the golf fairways and rolling terrain to the river
-    along the greenbelt. Finding a golf community with such expansive lots — while remaining so close
-    to Lake Conroe — is a major win. It offers the perfect balance: a peaceful, private oasis on over
-    1.2 acres, yet just minutes from dining, shopping, the lake, and even the airport.
+    The views are truly incredible, spanning from the golf fairways and rolling terrain
+    to the river along the greenbelt. Finding a golf community with such expansive lots —
+    while remaining so close to Lake Conroe — is a major win. A peaceful, private oasis
+    on over 1.2 acres, yet just minutes from dining, shopping, the lake, and the airport.
   </p>
-  <div class="quote-source">— The Sellers · 4817 &amp; 4815 West Fork Blvd</div>
+  <div class="quote-rule" aria-hidden="true"></div>
+  <div class="quote-source">The Sellers &nbsp;·&nbsp; 4817 &amp; 4815 West Fork Blvd</div>
 </section>
 
 
@@ -353,7 +517,7 @@
     <div class="map-embed">
       <iframe
         src="https://maps.google.com/maps?q=4817+West+Fork+Blvd,+Conroe,+TX+77304&output=embed"
-        title="Map to 4817 West Fork Blvd, Conroe TX"
+        title="Map — 4817 West Fork Blvd, Conroe TX 77304"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen>
@@ -361,34 +525,54 @@
     </div>
 
     <div class="location-info">
-      <div class="map-address-badge">
+      <div class="address-badge">
         <h4>West Fork Estates</h4>
         <p>4817 &amp; 4815 West Fork Blvd<br>Conroe, TX 77304</p>
       </div>
 
       <div class="directions-block">
-        <h4>Directions from I-45</h4>
+        <h4>From I-45</h4>
         <p class="directions-text">
-          Take Exit 87A for Hwy 105 West. Travel approximately 4.5 miles and turn left into West Fork
-          community at West Fork Blvd. Follow to West Fork Drive; 4817 and 4815 will be on your right.
+          Take Exit 87A for Hwy 105 West. Travel approximately 4.5 miles and turn left
+          at West Fork Blvd into the community. Follow to West Fork Drive — 4817 and 4815
+          will be on your right.
         </p>
       </div>
 
       <div class="directions-block">
         <h4>Alternate from Loop 336</h4>
         <p class="directions-text">
-          Take I-45 north to Loop 336, turn left. Continue to Hwy 105, turn left. Turn left at second
-          light on West Fork Boulevard into West Fork Subdivision. Follow to West Fork Estates. Home on right.
+          Take I-45 north to Loop 336, turn left. Continue to Hwy 105, turn left.
+          Turn left at the second light on West Fork Boulevard. Follow to West Fork Estates.
+          Home on the right.
         </p>
       </div>
 
-      <ul class="nearby-list" aria-label="Nearby landmarks">
-        <li class="nearby-item"><span class="nearby-icon" aria-hidden="true">🏌️</span>The Links at West Fork Golf Course — adjacent</li>
-        <li class="nearby-item"><span class="nearby-icon" aria-hidden="true">🌊</span>San Jacinto River — backs to property</li>
-        <li class="nearby-item"><span class="nearby-icon" aria-hidden="true">⛵</span>Lake Conroe — 5 miles</li>
-        <li class="nearby-item"><span class="nearby-icon" aria-hidden="true">🏙️</span>The Woodlands — 15 miles</li>
-        <li class="nearby-item"><span class="nearby-icon" aria-hidden="true">🛣️</span>I-45 access — 5 miles</li>
-        <li class="nearby-item"><span class="nearby-icon" aria-hidden="true">✈️</span>George Bush Intercontinental Airport — 35 miles</li>
+      <ul class="nearby-list" aria-label="Nearby landmarks and distances">
+        <li class="nearby-item">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-golf"/></svg>
+          The Links at West Fork Golf Course — adjacent
+        </li>
+        <li class="nearby-item">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-waves"/></svg>
+          San Jacinto River — backs to property
+        </li>
+        <li class="nearby-item">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>
+          Lake Conroe — 5 miles
+        </li>
+        <li class="nearby-item">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>
+          The Woodlands — 15 miles
+        </li>
+        <li class="nearby-item">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-road"/></svg>
+          I-45 access — 5 miles
+        </li>
+        <li class="nearby-item">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-plane"/></svg>
+          George Bush Intercontinental Airport — 35 miles
+        </li>
       </ul>
     </div>
   </div>
@@ -402,21 +586,36 @@
   <div class="cta-content">
     <h2 class="cta-title">Ready to Claim Your Legacy?</h2>
     <p class="cta-sub">
-      Schedule a private showing or attend our Open House on
-      <span data-oh-date>Sunday, April 19th</span> from <span data-oh-time>2–4 PM</span>.
+      Schedule a private showing or attend our Open House
+      on <span data-oh-date>Sunday, April 19th</span> from <span data-oh-time>2:00 – 4:00 PM</span>.
       Come experience the views firsthand.
     </p>
-    <div class="cta-buttons">
-      <a href="tel:9792557324" class="btn btn-primary">📞 Call Kelley</a>
-      <a href="mailto:k.bouchard@realtyofamerica.com" class="btn btn-ghost">✉ Send an Email</a>
-      <button class="btn btn-ghost" data-open-oh-modal data-oh>🗓 Open House RSVP</button>
+    <div class="cta-actions">
+      <a href="tel:9792557324" class="btn btn-primary" data-agent-phone-href>
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg>
+        <span data-agent-phone-text>Call Kelley — 979-255-7324</span>
+      </a>
+      <a href="mailto:k.bouchard@realtyofamerica.com" class="btn btn-ghost" data-agent-email-href>
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg>
+        <span data-agent-email-text>Send an Email</span>
+      </a>
+      <button class="btn btn-ghost" data-open-oh-modal data-oh>
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"/></svg>
+        Open House RSVP
+      </button>
     </div>
     <div class="contact-card">
       <div class="contact-name"  data-agent-name>Kelley Bouchard</div>
-      <div class="contact-title" data-agent-title>Realty of America, LLC · Listing Agent</div>
-      <div class="contact-info">
-        <a href="tel:9792557324" data-agent-phone-href data-agent-phone-text>📞 979-255-7324</a>
-        <a href="mailto:k.bouchard@realtyofamerica.com" data-agent-email-href data-agent-email-text>✉ k.bouchard@realtyofamerica.com</a>
+      <div class="contact-role"  data-agent-title>Realty of America, LLC &nbsp;·&nbsp; Listing Agent</div>
+      <div class="contact-links">
+        <a class="contact-link" href="tel:9792557324" data-agent-phone-href>
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span data-agent-phone-text>979-255-7324</span>
+        </a>
+        <a class="contact-link" href="mailto:k.bouchard@realtyofamerica.com" data-agent-email-href>
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg>
+          <span data-agent-email-text>k.bouchard@realtyofamerica.com</span>
+        </a>
       </div>
     </div>
   </div>
@@ -428,19 +627,19 @@
      ═══════════════════════════════════════════════════════════ -->
 <footer>
   <div class="footer-brand">
-    <div class="footer-logo-hex" aria-hidden="true">WF</div>
-    <div class="footer-company">
+    <div class="footer-hex" aria-hidden="true">WF</div>
+    <div class="footer-co">
       <strong>West Fork Estates</strong>
       Realty of America, LLC
     </div>
   </div>
   <div>
     <p class="footer-disc" data-footer-disc>
-      All information is believed to be accurate but is not guaranteed. Buyer/Agent to independently
-      verify all data including taxes, schools, and dimensions. All offers must include Proof of Funds
-      or comprehensive pre-approval. © 2026 Realty of America, LLC.
+      All information is believed to be accurate but is not guaranteed. Buyer/Agent to
+      independently verify all data including taxes, schools, and dimensions. All offers
+      must include Proof of Funds or comprehensive pre-approval. &copy; 2026 Realty of America, LLC.
     </p>
-    <p class="footer-disc" style="margin-top:8px;">
+    <p class="footer-disc" style="margin-top:6px;">
       <a href="https://www.har.com/mhf/terms/dispBrokerInfo?sitetype=aws&cid=840791"
          data-trec-link target="_blank" rel="noopener">
         TREC Information About Brokerage Services
@@ -455,13 +654,21 @@
      ═══════════════════════════════════════════════════════════ -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
   <div class="lightbox-inner">
-    <button class="lightbox-close" id="lb-close" aria-label="Close lightbox">✕</button>
+    <button class="lb-btn lb-close" id="lb-close" aria-label="Close lightbox">
+      <svg class="icon icon-sm"><use href="#i-close"/></svg>
+    </button>
     <img class="lightbox-img" id="lb-img" src="" alt="">
-    <p class="lightbox-caption" id="lb-caption"></p>
-    <p class="lightbox-counter" id="lb-counter"></p>
+    <div class="lightbox-meta">
+      <p class="lightbox-caption" id="lb-caption"></p>
+      <p class="lightbox-counter" id="lb-counter"></p>
+    </div>
   </div>
-  <button class="lightbox-prev" id="lb-prev" aria-label="Previous photo">‹</button>
-  <button class="lightbox-next" id="lb-next" aria-label="Next photo">›</button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">
+    <svg class="icon icon-sm"><use href="#i-arrow-left"/></svg>
+  </button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo">
+    <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg>
+  </button>
 </div>
 
 
@@ -470,32 +677,38 @@
      ═══════════════════════════════════════════════════════════ -->
 <div class="modal-overlay" id="oh-modal" data-oh role="dialog" aria-modal="true" aria-label="Open house details">
   <div class="modal-box">
-    <button class="modal-close" id="oh-modal-close" aria-label="Close">✕</button>
-    <div class="modal-icon" aria-hidden="true">🏡</div>
-    <h3 class="modal-title">You're Invited!</h3>
+    <button class="modal-close" id="oh-modal-close" aria-label="Close">
+      <svg class="icon icon-sm"><use href="#i-close"/></svg>
+    </button>
+    <div class="modal-eyebrow">
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"/></svg>
+      Open House Invitation
+    </div>
+    <h3 class="modal-title">You're Invited</h3>
     <p class="modal-sub">
-      Join us for an open house at 4817 West Fork Blvd.
-      Come experience the golf course and river views in person.
+      Join us at 4817 West Fork Blvd and experience the golf course and river views in person.
     </p>
-    <div class="modal-event-box">
+    <div class="modal-event">
       <div class="event-date" data-oh-date>Sunday, April 19th</div>
       <div class="event-time" data-oh-time>2:00 PM – 4:00 PM</div>
-      <div class="event-addr" data-oh-address>4817 West Fork Blvd · Conroe, TX 77304<br>West Fork Estates</div>
+      <div class="event-addr" data-oh-address>4817 West Fork Blvd &nbsp;·&nbsp; Conroe, TX 77304<br>West Fork Estates</div>
     </div>
-    <div class="modal-cal-buttons">
-      <a href="#" data-oh-gcal target="_blank" rel="noopener" class="cal-btn cal-btn-google">
-        🗓️ Add to Google Calendar
+    <div class="cal-buttons">
+      <a href="#" data-oh-gcal target="_blank" rel="noopener" class="cal-btn cal-google">
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-google-cal"/></svg>
+        Google Calendar
       </a>
-      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260419T190000Z%0ADTEND:20260419T210000Z%0ASUMMARY:Open+House+–+4817+West+Fork+Blvd%0ADESCRIPTION:West+Fork+Estates+Open+House%0ALOCATION:4817+West+Fork+Blvd+Conroe+TX+77304%0AEND:VEVENT%0AEND:VCALENDAR"
-         download="westfork-open-house.ics" class="cal-btn cal-btn-apple">
-        🍎 Add to Apple Calendar
+      <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260419T190000Z%0ADTEND:20260419T210000Z%0ASUMMARY:Open+House+%E2%80%93+4817+West+Fork+Blvd%0ADESCRIPTION:West+Fork+Estates+Open+House%0ALOCATION:4817+West+Fork+Blvd+Conroe+TX+77304%0AEND:VEVENT%0AEND:VCALENDAR"
+         download="westfork-open-house.ics" class="cal-btn cal-apple">
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-apple-cal"/></svg>
+        Apple Calendar
       </a>
     </div>
   </div>
 </div>
 
 
-<!-- Scripts — config must load before main -->
+<!-- Scripts: config must load before main -->
 <script src="content/config.js"></script>
 <script src="js/main.js"></script>
 </body>
