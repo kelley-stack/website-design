@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Source photo folders — keep originals out of git
+# (images/ contains the curated web-optimized copies)
+images-for-web-or-mls/
+Virtually staged/
+
+# Netlify local dev cache
+.netlify/
