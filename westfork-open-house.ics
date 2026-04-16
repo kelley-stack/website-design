@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//West Fork Landing//Open House//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260419T190000Z
+DTEND:20260419T210000Z
+SUMMARY:Open House – 4817 West Fork Blvd
+DESCRIPTION:West Fork Estates Open House. Golf course and river views.\nKelley Bouchard\, Realty of America\, 979-255-7324
+LOCATION:4817 West Fork Blvd\, Conroe\, TX 77304
+URL:https://westforklanding.netlify.app
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
