@@ -84,6 +84,159 @@
   }
 
 
+  /* ── 2b. MOBILE NAV DRAWER ───────────────────────────────────── */
+  function initMobileNav() {
+    const toggle    = document.getElementById('nav-toggle');
+    const drawer    = document.getElementById('nav-drawer');
+    const backdrop  = document.getElementById('nav-drawer-backdrop');
+    const closeBtn  = document.getElementById('nav-drawer-close');
+    if (!toggle || !drawer || !backdrop) return;
+
+    const focusables = () => drawer.querySelectorAll('a, button');
+    let lastFocus = null;
+
+    function open() {
+      lastFocus = document.activeElement;
+      drawer.classList.add('active');
+      backdrop.classList.add('active');
+      drawer.setAttribute('aria-hidden', 'false');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-open');
+      setTimeout(() => closeBtn?.focus(), 50);
+    }
+    function close() {
+      drawer.classList.remove('active');
+      backdrop.classList.remove('active');
+      drawer.setAttribute('aria-hidden', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    toggle.addEventListener('click', open);
+    closeBtn?.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+
+    // Close after any in-drawer nav link tap
+    drawer.querySelectorAll('[data-drawer-link]').forEach(link => {
+      link.addEventListener('click', () => setTimeout(close, 80));
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!drawer.classList.contains('active')) return;
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key === 'Tab') {
+        const items = Array.from(focusables());
+        if (!items.length) return;
+        const first = items[0];
+        const last  = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+
+
+  /* ── 2c. SCROLL REVEAL ───────────────────────────────────────── */
+  function initScrollReveal() {
+    const els = document.querySelectorAll('[data-reveal]');
+    if (!els.length || !('IntersectionObserver' in window)) {
+      els.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+    // Stagger children index for grids using data-reveal-stagger
+    document.querySelectorAll('[data-reveal-stagger]').forEach(parent => {
+      Array.from(parent.children).forEach((child, i) => {
+        child.style.setProperty('--reveal-i', i);
+      });
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => io.observe(el));
+  }
+
+
+  /* ── 2d. HERO STAT COUNT-UP ──────────────────────────────────── */
+  function initHeroStatCountUp() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const nums = document.querySelectorAll('.hero-stat-num');
+    if (!nums.length || !('IntersectionObserver' in window)) return;
+
+    function animate(el) {
+      const txt = el.textContent;
+      // Skip stats with multiple numeric groups (e.g. "4BR / 4.5BA", "$690K | $90K")
+      const groups = txt.match(/[\d,]+\.?\d*/g);
+      if (!groups || groups.length !== 1) return;
+      const match = txt.match(/[\d,]+\.?\d*/);
+      const target = parseFloat(match[0].replace(/,/g, ''));
+      if (!Number.isFinite(target) || target < 10) return;
+      const hasComma = /,/.test(match[0]);
+      const decimals = (match[0].split('.')[1] || '').length;
+      const prefix   = txt.slice(0, match.index);
+      const suffix   = txt.slice(match.index + match[0].length);
+      const duration = 1100;
+      const start    = performance.now();
+      function frame(now) {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const cur = target * eased;
+        const formatted = decimals
+          ? cur.toFixed(decimals)
+          : Math.round(cur).toString();
+        const withCommas = hasComma
+          ? formatted.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+          : formatted;
+        el.textContent = prefix + withCommas + suffix;
+        if (t < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    nums.forEach(el => io.observe(el));
+  }
+
+
+  /* ── 2e. GALLERY CELL FADE-IN ────────────────────────────────── */
+  function initGalleryReveal() {
+    const cells = document.querySelectorAll('.photo-cell');
+    if (!cells.length) return;
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      cells.forEach(c => c.classList.add('is-visible'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const idx = parseInt(entry.target.dataset.galleryIdx, 10) || 0;
+          entry.target.style.transitionDelay = ((idx % 6) * 50) + 'ms';
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
+    cells.forEach(c => io.observe(c));
+  }
+
+
   /* ── 3. GALLERY LIGHTBOX ─────────────────────────────────────── */
   const GALLERY = [
     { src: 'images/gallery/1.jpg',                                    caption: '4817 West Fork Blvd — Front Elevation'                  },
@@ -206,8 +359,9 @@
       if (e.key === 'Escape' && overlay.classList.contains('active')) close();
     });
 
-    // Auto-show once per browser session
-    if (!sessionStorage.getItem('oh-shown')) {
+    // Auto-show once per browser session — desktop only (avoid intrusive popup on mobile)
+    const isDesktop = window.matchMedia('(min-width: 769px)').matches;
+    if (isDesktop && !sessionStorage.getItem('oh-shown')) {
       setTimeout(() => {
         open();
         sessionStorage.setItem('oh-shown', '1');
@@ -235,9 +389,13 @@
   document.addEventListener('DOMContentLoaded', () => {
     populateConfig();
     initNav();
+    initMobileNav();
     initLightbox();
     initModal();
     initSmoothScroll();
+    initScrollReveal();
+    initHeroStatCountUp();
+    initGalleryReveal();
   });
 
 })();

@@ -106,6 +106,14 @@
     <path d="M12 20.94c1.5 0 4-.6 4-8.94 0-4.94-2-7-4-7s-4 2.06-4 7c0 8.34 2.5 8.94 4 8.94Z"/>
     <path d="M12 6V2M9 3.5C9 3.5 7 4 7 2"/>
   </symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6"  x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="9 18 15 12 9 6"/>
+  </symbol>
 </svg>
 
 
@@ -130,7 +138,65 @@
     <a href="#directions">Directions</a>
     <a href="#contact" class="nav-cta">Schedule a Showing</a>
   </div>
+
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+    <svg class="icon icon-md" aria-hidden="true"><use href="#i-menu"/></svg>
+  </button>
 </nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     MOBILE NAV DRAWER
+     ═══════════════════════════════════════════════════════════ -->
+<div class="nav-drawer-backdrop" id="nav-drawer-backdrop" aria-hidden="true"></div>
+<aside class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
+  <div class="nav-drawer-header">
+    <div class="nav-drawer-brand">
+      <div class="nav-logo-mark" aria-hidden="true">WF</div>
+      <div>
+        <div class="nav-drawer-title">West Fork Estates</div>
+        <div class="nav-drawer-sub">Kelley Bouchard · Realty of America</div>
+      </div>
+    </div>
+    <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Close menu">
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+
+  <nav class="nav-drawer-links" aria-label="Mobile navigation">
+    <a href="#gallery" data-drawer-link>
+      <span>Gallery</span>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+    </a>
+    <a href="#properties" data-drawer-link>
+      <span>Properties</span>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+    </a>
+    <a href="#features" data-drawer-link>
+      <span>Lifestyle</span>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+    </a>
+    <a href="#directions" data-drawer-link>
+      <span>Directions</span>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+    </a>
+  </nav>
+
+  <div class="nav-drawer-cta">
+    <a href="#contact" class="btn btn-primary nav-drawer-primary" data-drawer-link>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"/></svg>
+      Schedule a Showing
+    </a>
+    <a href="tel:9792557324" class="btn btn-outline-white" data-agent-phone-href>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span data-agent-phone-text>979-255-7324</span>
+    </a>
+  </div>
+
+  <div class="nav-drawer-footer">
+    <div class="nav-drawer-addr">4817 &amp; 4815 West Fork Blvd<br>Conroe, TX 77304</div>
+  </div>
+</aside>
 
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -210,14 +276,14 @@
      PHOTO GALLERY
      ═══════════════════════════════════════════════════════════ -->
 <section class="gallery-section" id="gallery" aria-label="Property photo gallery">
-  <div class="section-intro">
+  <div class="section-intro" data-reveal>
     <div class="section-label">West Fork Estates</div>
     <h2 class="section-title">Views You Have to<br><em>See to Believe</em></h2>
   </div>
 
   <div class="photo-grid" role="list" aria-label="Photo gallery grid">
-    <div class="photo-cell" role="listitem" data-gallery-idx="0" tabindex="0" aria-label="Front elevation"><img src="images/gallery/1.jpg" alt="Front Elevation" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
-    <div class="photo-cell" role="listitem" data-gallery-idx="1" tabindex="0" aria-label="Deck virtually staged"><img src="images/gallery/2%20Deck%20virtually%20staged.jpg" alt="Deck (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
+    <div class="photo-cell photo-feature-lg" role="listitem" data-gallery-idx="0" tabindex="0" aria-label="Front elevation"><img src="images/gallery/1.jpg" alt="Front Elevation" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
+    <div class="photo-cell photo-tall" role="listitem" data-gallery-idx="1" tabindex="0" aria-label="Deck virtually staged"><img src="images/gallery/2%20Deck%20virtually%20staged.jpg" alt="Deck (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="2" tabindex="0" aria-label="Deck additional view"><img src="images/gallery/3%20deck%20virtually%20staged.jpg" alt="Deck — Additional View (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="3" tabindex="0" aria-label="Exterior"><img src="images/gallery/4.jpg" alt="Exterior" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="4" tabindex="0" aria-label="Entryway"><img src="images/gallery/5%20entryway.jpg" alt="Entryway" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
@@ -227,7 +293,7 @@
     <div class="photo-cell" role="listitem" data-gallery-idx="8" tabindex="0" aria-label="Family room virtually staged"><img src="images/gallery/9%20family%20room%20virtually%20staged.jpg" alt="Family Room (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="9" tabindex="0" aria-label="Family room"><img src="images/gallery/10%20family%20room.jpg" alt="Family Room" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="10" tabindex="0" aria-label="Family room additional view"><img src="images/gallery/11%20family%20room.jpg" alt="Family Room — Additional View" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
-    <div class="photo-cell" role="listitem" data-gallery-idx="11" tabindex="0" aria-label="Kitchen"><img src="images/gallery/12%20kitchen.jpg" alt="Kitchen" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
+    <div class="photo-cell photo-wide" role="listitem" data-gallery-idx="11" tabindex="0" aria-label="Kitchen"><img src="images/gallery/12%20kitchen.jpg" alt="Kitchen" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="12" tabindex="0" aria-label="Breakfast area"><img src="images/gallery/13%20breakfast%20area%20virtually%20staged.jpg" alt="Breakfast Area (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="13" tabindex="0" aria-label="Kitchen additional view"><img src="images/gallery/14%20kitchen.jpg" alt="Kitchen — Additional View" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="14" tabindex="0" aria-label="Kitchen additional angle"><img src="images/gallery/15%20kitchen.jpg" alt="Kitchen — Additional Angle" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
@@ -236,7 +302,7 @@
     <div class="photo-cell" role="listitem" data-gallery-idx="17" tabindex="0" aria-label="Primary bathroom"><img src="images/gallery/18%20primary%20bathroom.jpg" alt="Primary Bathroom" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="18" tabindex="0" aria-label="Primary bathroom additional view"><img src="images/gallery/19%20primay%20bathroom.jpg" alt="Primary Bathroom — Additional View" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="19" tabindex="0" aria-label="Primary closet"><img src="images/gallery/20%20primary%20closet%20virtually%20staged.jpg" alt="Primary Closet (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
-    <div class="photo-cell" role="listitem" data-gallery-idx="20" tabindex="0" aria-label="Game media room virtually staged"><img src="images/gallery/22%20game.media%20room%20virtually%20staged.jpg" alt="Game / Media Room (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
+    <div class="photo-cell photo-tall" role="listitem" data-gallery-idx="20" tabindex="0" aria-label="Game media room virtually staged"><img src="images/gallery/22%20game.media%20room%20virtually%20staged.jpg" alt="Game / Media Room (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="21" tabindex="0" aria-label="Game media room"><img src="images/gallery/23%20game.media%20room.jpg" alt="Game / Media Room" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="22" tabindex="0" aria-label="Secondary bedroom virtually staged"><img src="images/gallery/24%20secondary%20bedroom%20virtually%20staged.jpg" alt="Secondary Bedroom (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="23" tabindex="0" aria-label="Secondary bedroom additional view"><img src="images/gallery/25%20secondary%20bedroom%20virtually%20staged.jpg" alt="Secondary Bedroom — Additional View (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
@@ -245,7 +311,7 @@
     <div class="photo-cell" role="listitem" data-gallery-idx="26" tabindex="0" aria-label="Second primary suite virtually staged"><img src="images/gallery/27%20second%20primary%20up%20virtually%20staged.jpg" alt="Second Primary Suite Upstairs (Virtually Staged)" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="27" tabindex="0" aria-label="En suite bathroom"><img src="images/gallery/28%20en%20suite.jpg" alt="En Suite Bathroom" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="28" tabindex="0" aria-label="En suite bedroom"><img src="images/gallery/29%20en%20suite%20br.jpg" alt="En Suite Bedroom" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
-    <div class="photo-cell" role="listitem" data-gallery-idx="29" tabindex="0" aria-label="Photo 31"><img src="images/gallery/31.jpg" alt="4817 West Fork Blvd" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
+    <div class="photo-cell photo-wide" role="listitem" data-gallery-idx="29" tabindex="0" aria-label="Photo 31"><img src="images/gallery/31.jpg" alt="4817 West Fork Blvd" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="30" tabindex="0" aria-label="Photo 32"><img src="images/gallery/32.jpg" alt="4817 West Fork Blvd" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="31" tabindex="0" aria-label="Photo 33"><img src="images/gallery/33.jpg" alt="4817 West Fork Blvd" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
     <div class="photo-cell" role="listitem" data-gallery-idx="32" tabindex="0" aria-label="Photo 33B"><img src="images/gallery/33-web-or-mls-DSC00121.jpg" alt="4817 West Fork Blvd" loading="lazy"><div class="photo-overlay"><span class="photo-expand-icon" aria-hidden="true"><svg class="icon icon-md"><use href="#i-expand"/></svg></span></div></div>
@@ -264,12 +330,12 @@
      PROPERTIES
      ═══════════════════════════════════════════════════════════ -->
 <section class="properties-section" id="properties" aria-label="Available properties">
-  <div class="section-intro">
+  <div class="section-intro" data-reveal>
     <div class="section-label">Two Opportunities. One Legacy.</div>
     <h2 class="section-title">Available Individually<br>or Together as a <em>Compound</em></h2>
   </div>
 
-  <div class="property-cards">
+  <div class="property-cards" data-reveal data-reveal-stagger>
 
     <!-- 4817 — THE ESTATE HOME -->
     <article class="property-card featured" aria-label="4817 West Fork Blvd — Estate Home">
@@ -364,7 +430,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      COMPOUND CALLOUT
      ═══════════════════════════════════════════════════════════ -->
-<section class="compound-section" aria-label="Combined compound opportunity">
+<section class="compound-section" aria-label="Combined compound opportunity" data-reveal>
   <div class="compound-layout">
     <div class="compound-text">
       <div class="compound-kicker">Combined Opportunity</div>
@@ -405,13 +471,13 @@
      LIFESTYLE SECTION
      ═══════════════════════════════════════════════════════════ -->
 <section class="lifestyle-section" id="features" aria-label="Lifestyle and location highlights">
-  <div class="section-intro">
+  <div class="section-intro" data-reveal>
     <div class="section-label">The West Fork Lifestyle</div>
     <h2 class="section-title">Where Nature Meets <em>Refined Living</em></h2>
   </div>
 
   <div class="lifestyle-grid">
-    <div class="lifestyle-text">
+    <div class="lifestyle-text" data-reveal>
       <h3>Resort-Style Privacy.<br><em>Minutes from Everything.</em></h3>
       <p>
         Perched on the premium estate section of West Fork, this property delivers a rare
@@ -460,7 +526,7 @@
       <div class="lifestyle-image-wrap">
         <img src="images/gallery/2%20Deck%20virtually%20staged.jpg" alt="Backyard deck view" loading="lazy">
       </div>
-      <div class="lifestyle-cards">
+      <div class="lifestyle-cards" data-reveal data-reveal-stagger>
         <div class="lifestyle-card">
           <div class="lc-icon-wrap" aria-hidden="true">
             <svg class="icon icon-sm"><use href="#i-utensils"/></svg>
@@ -498,7 +564,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      SELLER QUOTE
      ═══════════════════════════════════════════════════════════ -->
-<section class="quote-section" aria-label="Seller quote">
+<section class="quote-section" aria-label="Seller quote" data-reveal>
   <span class="quote-mark" aria-hidden="true">"</span>
   <p class="quote-text">
     The views are truly incredible, spanning from the golf fairways and rolling terrain
@@ -515,7 +581,7 @@
      LOCATION / DIRECTIONS
      ═══════════════════════════════════════════════════════════ -->
 <section class="location-section" id="directions" aria-label="Location and directions">
-  <div class="section-intro">
+  <div class="section-intro" data-reveal>
     <div class="section-label">Find Your Way Here</div>
     <h2 class="section-title">Directions &amp; <em>Location</em></h2>
   </div>
@@ -590,7 +656,7 @@
      CTA / CONTACT
      ═══════════════════════════════════════════════════════════ -->
 <section class="cta-section" id="contact" aria-label="Contact and showing request">
-  <div class="cta-content">
+  <div class="cta-content" data-reveal>
     <h2 class="cta-title">Ready to Claim Your Legacy?</h2>
     <p class="cta-sub">
       Schedule a private showing or attend our Open House

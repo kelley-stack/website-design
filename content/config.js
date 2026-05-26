@@ -13,18 +13,18 @@ const SITE_CONFIG = {
   // Set active: false to hide the banner and modal entirely
   openHouse: {
     active: true,
-    date:   "Sunday, April 19th",
+    date:   "Sunday, May 31st",
     time:   "2:00 PM – 4:00 PM",
     address: "4817 West Fork Blvd, Conroe, TX 77304",
     // Google Calendar link — update dates (format: YYYYMMDDTHHmmSSZ / UTC)
-    googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Open+House+%E2%80%93+4817+West+Fork+Blvd&dates=20260419T190000Z/20260419T210000Z&details=West+Fork+Estates+Open+House.+Golf+course+and+river+views.+Kelley+Bouchard%2C+Realty+of+America+979-255-7324&location=4817+West+Fork+Blvd,+Conroe,+TX+77304",
+    googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Open+House+%E2%80%93+4817+West+Fork+Blvd&dates=20260531T190000Z/20260531T210000Z&details=West+Fork+Estates+Open+House.+Golf+course+and+river+views.+Kelley+Bouchard%2C+Realty+of+America+979-255-7324&location=4817+West+Fork+Blvd,+Conroe,+TX+77304",
   },
 
   // ─── PROPERTY 1 — THE ESTATE HOME ─────────────────────────────────────────
   home: {
     address:    "4817 West Fork Blvd",
     city:       "Conroe, TX 77304",
-    price:      "$590,000",
+    price:      "$690,000",
     beds:       "4",
     baths:      "4 Full / 1 Half",
     built:      "2007",
@@ -65,7 +65,7 @@ const SITE_CONFIG = {
   // ─── COMPOUND (combined) ──────────────────────────────────────────────────
   compound: {
     totalAcres:      "1.2+",
-    combinedPrice:   "$680,000",
+    combinedPrice:   "$780,000",
     homePriceLabel:  "4817 Estate Home",
     lotPriceLabel:   "4815 Wooded Lot",
   },
@@ -75,7 +75,7 @@ const SITE_CONFIG = {
     { num: "4BR / 4.5BA",   label: "Beds & Baths"  },
     { num: "4,054",         label: "Sq Ft"          },
     { num: "1.2+",          label: "Total Acres"    },
-    { num: "$590K | $90K",  label: "List Price"     },
+    { num: "$690K | $90K",  label: "List Price"     },
   ],
 
   // ─── AGENT CONTACT ────────────────────────────────────────────────────────
